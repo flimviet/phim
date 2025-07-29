@@ -28,8 +28,8 @@
     <div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
 
         <div class="flex flex-col md:flex-row gap-8">
-            <img src="https://i.postimg.cc/YCVBVYQV/14b303d6f0a8187aa7a9415cf929ae2e.jpg"
-                alt="Conan Movie 28" class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+            <img src="https://i.postimg.cc/YCVBVYQV/14b303d6f0a8187aa7a9415cf929ae2e.jpg" alt="Conan Movie 28"
+                class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
             <div class="space-y-3">
                 <h1 class="text-3xl font-bold text-yellow-400">Thám tử lừng danh Conan (Movie 28)</h1>
                 <p class="text-gray-400 italic">Dư ảnh của độc nhãn (2025)</p>
@@ -43,8 +43,7 @@
                 <p><strong>Năm:</strong> 2025</p>
                 <p><strong>Thời lượng:</strong> 110 phút</p>
 
-                <p><strong>Nguồn: <a href="//animevietsub.xin">AnimeVietsub.Xin</a></strong></p>
-                <p>Nếu có vấn đề bản quyền, các bạn hãy liên hệ email mhdohynaf169@googlemail.com, chúng mình sẽ gỡ bỏ.
+                <p><strong>Nguồn: <a href="//docchuyentrang.blogspot.com/p/conan-movie-028.html?m=1">AnimeVietsub.Xin</a></strong></p>
                 </p>
 
                 <button onclick="playVideo()"
@@ -62,14 +61,15 @@
         </div>
 
         <div id="Video" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
-            <iframe src="https://short.icu/4RiGOIdzF" loading="lazy"
+            <iframe id="videoFrame" src="" loading="lazy"
                 style="border:0; position:absolute; top:0; height:100%; width:100%;"
-                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true">
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen>
             </iframe>
         </div>
 
+
     </div>
-    <div id="watermark">&#169; Flimvietsub, Nguồn phim: AnimeVietsub.Xin</div>
+    <div id="watermark">&#169; Flimviet</div>
     <style>
         #watermark {
             position: fixed;
@@ -129,12 +129,28 @@
     </div>
 
     <script>
-        function playVideo() {
-            const video = document.getElementById('Video');
-            video.style.display = 'block';
-            video.scrollIntoView({ behavior: 'smooth' });
+        async function playVideo() {
+            const videoContainer = document.getElementById('Video');
+            const iframe = document.getElementById('videoFrame');
+
+            try {
+                const res = await fetch('http://flimapi.x10.mx/?link=https://docchuyentrang.blogspot.com/p/conan-movie-028.html?m=1');
+                const data = await res.json();
+
+                if (data.iframe_src) {
+                    iframe.src = data.iframe_src;
+                    videoContainer.style.display = 'block';
+                    videoContainer.scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    alert("Không tìm thấy video.");
+                }
+            } catch (err) {
+                console.error(err);
+                alert("Không thể tải video. Vui lòng thử lại sau.");
+            }
         }
     </script>
+
 
 </body>
 
