@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Conan Movie 25 | FlimVietsub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #Video {
+            display: none;
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+        }
+
+        #Video iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-white font-sans">
+
+    <div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
+
+        <div class="flex flex-col md:flex-row gap-8">
+            <img src="https://files.catbox.moe/nhas8f.jpg" alt="Conan Movie 25"
+                class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+            <div class="space-y-3">
+                <h1 class="text-3xl font-bold text-yellow-400">Thám tử lừng danh Conan (Movie 25)</h1>
+                <p class="text-gray-400 italic">Nàng dâu Halloween</p>
+
+                <div class="flex gap-2 flex-wrap">
+                    <span class="bg-blue-600 px-3 py-1 rounded-full text-sm">Hành Động</span>
+                    <span class="bg-purple-600 px-3 py-1 rounded-full text-sm">Trinh Thám</span>
+                    <span class="bg-red-600 px-3 py-1 rounded-full text-sm">Hoạt Hình</span>
+                </div>
+
+                <p><strong>Năm:</strong> 2022</p>
+                <p><strong>Thời lượng:</strong> 110 phút</p>
+                <p><strong>Đánh giá:</strong> ⭐⭐⭐⭐ 4.9</p>
+
+                </p>
+                </p>
+
+                <button onclick="playVideo()"
+                    class="mt-4 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-bold py-2 px-5 rounded-lg text-lg flex items-center gap-2 transition duration-300 shadow-lg">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-5 h-5 fill-white">
+                        <path
+                            d="M64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM252.3 211.1C244.7 215.3 240 223.4 240 232L240 408C240 416.7 244.7 424.7 252.3 428.9C259.9 433.1 269.1 433 276.6 428.4L420.6 340.4C427.7 336 432.1 328.3 432.1 319.9C432.1 311.5 427.7 303.8 420.6 299.4L276.6 211.4C269.2 206.9 259.9 206.7 252.3 210.9z" />
+                    </svg>
+
+                    Xem Phim
+                </button>
+
+            </div>
+        </div>
+
+        <div id="Video" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
+            <iframe src="https://helvid.net/play/index/ee9f62cd011d" loading="lazy"
+                style="border:0; position:absolute; top:0; height:100%; width:100%;"
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true">
+            </iframe>
+        </div>
+
+
+    </div>
+    <div
+        class='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-extrabold text-cyan-300/20 pointer-events-none z-[9999] whitespace-nowrap animate-[move_10s_ease-in-out_infinite]'>
+        &#169; Flimviet
+    </div>
+
+    <script>
+        function playVideo() {
+            const video = document.getElementById('Video');
+            video.style.display = 'block';
+            video.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+
+</body>
+
+</html>
