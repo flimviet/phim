@@ -20,6 +20,16 @@
             height: 100%;
             border: none;
         }
+
+        .rating {
+            max-width: 600px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .rating strong {
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -32,7 +42,7 @@
                 class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
             <div class="space-y-3">
                 <h1 class="text-3xl font-bold text-yellow-400">Thám tử lừng danh Conan (Movie 28)</h1>
-                <p class="text-gray-400 italic">Dư ảnh của độc nhãn (2025)</p>
+                <p class="text-gray-400 italic">Dư Ảnh Của Độc Nhãn (2025)</p>
 
                 <div class="flex gap-2 flex-wrap">
                     <span class="bg-blue-600 px-3 py-1 rounded-full text-sm">Hành Động</span>
@@ -42,7 +52,12 @@
 
                 <p><strong>Năm:</strong> 2025</p>
                 <p><strong>Thời lượng:</strong> 110 phút</p>
-                <p><strong>Đánh giá:</strong> ⭐⭐⭐⭐ 4.3</p>
+                <p style="display: flex; align-items: center; gap: 6px;">
+                    <img src="imdb-logo.png" alt="IMDb Rating" style="height: 24px;">
+                    <span>6.9 - Update: 30/07/2025</span>
+                <p></p>
+                </p>
+
 
 
                 <button onclick="playVideo()"
