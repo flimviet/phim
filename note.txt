@@ -1,1 +1,1 @@
-description="Đây là FliMviet Beta (28/07/2025), phiên bản mới của FlimViet.Xin (28/07/2016 - 12/03/2021)"
+description="Đây là NanSuBFan Beta (28/07/2025), phiên bản mới của NanSuBFan.Xin (28/07/2016 - 12/03/2021)"

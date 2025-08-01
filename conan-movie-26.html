@@ -3,25 +3,11 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Conan Movie 26 | FliMviet</title>
+    <title>Conan Movie 26 | NanSuBFan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <style>
-        #Video {
-            display: none;
-            position: relative;
-            width: 100%;
-            aspect-ratio: 16 / 9;
-        }
-
-        #Video iframe {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+    <script src="//cdn.tailwindcss.com"></script>
+    <link href="//fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-950 text-white font-sans">
@@ -29,8 +15,8 @@
     <div class="max-w-6xl mx-auto px-6 py-10 space-y-10">
 
         <div class="flex flex-col md:flex-row gap-8">
-            <img src="https://files.catbox.moe/lsubk8.jpg" alt="Conan Movie 26"
-                class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
+            <img src="//upload.wikimedia.org/wikipedia/vi/5/58/Conan_-_The_Black_Iron_Submarine_-_Vietnam_poster.jpg"
+                alt="Conan Movie 26" class="w-60 rounded-xl shadow-lg hover:scale-105 transition duration-300" />
             <div class="space-y-3">
                 <h1 class="text-3xl font-bold text-yellow-400">Thám tử lừng danh Conan (Movie 26)</h1>
                 <p class="text-gray-400 italic">Tàu Ngầm Sắt Màu Đen</p>
@@ -66,16 +52,32 @@
         </div>
 
         <div id="Video" style="display:none; position:absolute; top:0; left:0; width:100%; height:100%;">
-            <iframe src="https://helvid.net/play/index/971cc4630f37" loading="lazy"
+            <iframe src="//helvid.net/play/index/971cc4630f37" loading="lazy"
                 style="border:0; position:absolute; top:0; height:100%; width:100%;"
                 allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;" allowfullscreen="true">
             </iframe>
+
+            <div id="watermark" style="
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    pointer-events: none;
+">
+                <img src="//i.postimg.cc/rFhCz1Jh/nansubfan.png" style="
+        height: 42px;
+        opacity: 0.25;
+        transform: scale(1.5);
+    " />
+            </div>
+
         </div>
 
 
         <div
             class='fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-extrabold text-cyan-300/20 pointer-events-none z-[9999] whitespace-nowrap animate-[move_10s_ease-in-out_infinite]'>
-            &#169; FliMviet
+            &#169; NanSuBFan
         </div>
 
 
