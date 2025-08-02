@@ -3,7 +3,7 @@ async function playVideo() {
     const iframe = document.getElementById('Video');
 
     try {
-        const res = await fetch('//flimapi.x10.mx/?link=//docchuyentrang.blogspot.com/p/conan-movie-028.html?m=1');
+        const res = await fetch('https://flimapi.x10.mx/?link=https://docchuyentrang.blogspot.com/p/conan-movie-028.html?m=1');
         const data = await res.json();
 
         if (data.iframe_src) {
